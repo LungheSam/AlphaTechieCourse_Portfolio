@@ -10,6 +10,7 @@ body{
     background: #000;
     padding: 0;
     margin: 0;
+    position: inherit;
 }
 .header{
     display: flex;
@@ -18,7 +19,11 @@ body{
     background-color: black;
     backdrop-filter: blur(10px);
     align-items: center ;
+    width: 100%;
+    height: auto;
+    position: fixed;top: 0;left: 0;
 }
+
 .header .nav-bar ul{
     list-style: none;
     display: flex;
@@ -56,7 +61,7 @@ body{
     /* padding:4rem 3rem; */
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
 }
 .main-image{
@@ -124,6 +129,7 @@ body{
     background-color: rgb(3, 228, 3);
     margin-block: 30px;
     box-shadow: 0px 0px 10px 3px rgb(3, 228, 3,0.75);
+    text-align: center;
 }
 #about{
     width: 100%;
@@ -207,7 +213,7 @@ body{
     padding: 2rem;
     
 }
-.projects-title{
+.projects-title,.contacts-title{
     color: #fff;
     text-align: center;
     font-size: 3rem;
@@ -222,7 +228,124 @@ body{
 .card-projects .card-title{
     text-align: center;
 }
-footer{
-    text-align: center;
+
+
+.image-project{
+    width: 100%;
+    padding:0.5rem;
+}
+.image-project img{
+    width: 100%;
+    max-height: 60%;
+}
+.contacts{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-left{
+    margin: 2rem;
+}
+.input-form input{
+    outline: none;
+    border: 2px solid rgb(0, 255, 0);
+    width: 30vw;
+    padding: 1rem 2rem;
+    margin-block: 1rem;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 1rem;
+    color:rgb(0, 255, 0);
 }
 
+.text-message{
+    width: 30vw;
+    outline: none;
+    height: 20vh;
+    margin-block: 2rem;
+    border: 2px solid rgb(0, 255, 0);
+    background: transparent;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+}
+footer{
+    text-align: center;
+    margin-block: 2rem;
+}
+
+@media screen and (max-width:965px){
+    body{
+        overflow-x: hidden;
+    }
+    
+    .header .nav-bar ul{
+        display: none;
+    }
+    .home{
+        display: flex;
+    padding:4rem 3rem;
+    align-items: center;
+    height: 140vh;
+    flex-direction: column-reverse;
+    }
+
+    .home-left{
+        max-width: 100%;
+        text-align: center;
+        margin-block: 3rem;
+    }
+    #about{
+        flex-direction: column;
+        align-items: center;
+        height: 140vh;
+    } 
+    .about-right{
+        width: 100%;
+    }
+    .about-left{
+        max-width: 100%;
+        text-align: center;
+        margin-block: 3rem;
+    }
+    .about-text{
+        margin-bottom: 0;
+        text-align: center;
+
+        
+    }
+    #services{
+        height: 300vh;
+    }
+    .card-container{
+        flex-direction: column;
+    }
+    .card-projects,.card{
+        margin-bottom: 1rem;
+        scale: 0.9;
+        padding: 1rem;
+    }
+    .image-project img{
+        scale: 0.8;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+    .contacts{
+        height: 140vh;
+    }
+    .contact-container{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .input-form input,.text-message{
+        width: 100%;
+    }
+   
+}
